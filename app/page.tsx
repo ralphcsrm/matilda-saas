@@ -3,12 +3,12 @@ import MatildaCharacter from "@/components/MatildaCharacter";
 export default function Home() {
   return (
     <main
-      className="min-h-screen w-full flex items-center justify-center p-6 md:p-12"
+      className="min-h-screen w-full flex items-center justify-center p-3 md:p-6"
       style={{ backgroundColor: "#B85A3A" }}
     >
       {/* Outer recess shadow — gives the card the "recessed ceiling" depth */}
       <div
-        className="w-full max-w-5xl rounded-2xl relative"
+        className="w-full max-w-7xl rounded-2xl relative"
         style={{
           boxShadow: "0 -2px 0 0 rgba(0,0,0,0.25), 0 24px 80px rgba(0,0,0,0.55)",
         }}
@@ -18,7 +18,7 @@ export default function Home() {
           className="w-full rounded-2xl overflow-hidden flex flex-col md:flex-row"
           style={{
             backgroundColor: "#252525",
-            minHeight: "560px",
+            minHeight: "640px",
           }}
         >
           {/* LEFT — Copy */}
