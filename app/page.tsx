@@ -1,65 +1,103 @@
-import Image from "next/image";
+import MatildaCharacter from "@/components/MatildaCharacter";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <main
+      className="min-h-screen w-full flex items-center justify-center p-6 md:p-12"
+      style={{ backgroundColor: "#B85A3A" }}
+    >
+      {/* Outer recess shadow — gives the card the "recessed ceiling" depth */}
+      <div
+        className="w-full max-w-5xl rounded-2xl relative"
+        style={{
+          boxShadow: "0 -2px 0 0 rgba(0,0,0,0.25), 0 24px 80px rgba(0,0,0,0.55)",
+        }}
+      >
+        {/* Card */}
+        <div
+          className="w-full rounded-2xl overflow-hidden flex flex-col md:flex-row"
+          style={{
+            backgroundColor: "#252525",
+            minHeight: "560px",
+          }}
+        >
+          {/* LEFT — Copy */}
+          <div className="flex-1 flex flex-col justify-center px-12 py-16 md:py-20 md:px-16">
+            {/* Eyebrow */}
+            <p
+              className="text-xs tracking-[0.25em] uppercase mb-6"
+              style={{ color: "#B85A3A", fontFamily: "'Inter', sans-serif", fontWeight: 500 }}
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Your personal chief&#8209;of&#8209;staff
+            </p>
+
+            {/* Headline */}
+            <h1
+              className="text-5xl md:text-6xl mb-8 leading-tight"
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                color: "#F2EDE8",
+                fontWeight: 700,
+                letterSpacing: "-0.01em",
+              }}
             >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+              Meet<br />Matilda.
+            </h1>
+
+            {/* Body */}
+            <p
+              className="text-base md:text-lg leading-relaxed mb-12 max-w-sm"
+              style={{
+                color: "#9A8E87",
+                fontFamily: "'Inter', sans-serif",
+                fontWeight: 300,
+              }}
+            >
+              Quirky, intuitive, excellent. She holds everything
+              so your mind can rest. We&apos;re going to do big
+              things together.
+            </p>
+
+            {/* CTA */}
+            <div>
+              <button
+                className="inline-flex items-center justify-center rounded-full text-sm font-medium transition-opacity hover:opacity-80 active:opacity-60"
+                style={{
+                  backgroundColor: "#0A0A0A",
+                  color: "#F2EDE8",
+                  padding: "14px 36px",
+                  fontFamily: "'Inter', sans-serif",
+                  letterSpacing: "0.04em",
+                }}
+              >
+                Initialize
+              </button>
+            </div>
+          </div>
+
+          {/* RIGHT — Character */}
+          <div
+            className="relative flex-shrink-0 flex items-end justify-center md:justify-end overflow-hidden"
+            style={{
+              width: "100%",
+              maxWidth: "420px",
+              minHeight: "420px",
+            }}
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
+            {/* Subtle right-panel tint */}
+            <div
+              className="absolute inset-0"
+              style={{
+                background:
+                  "linear-gradient(135deg, #252525 0%, #1E1E1E 100%)",
+              }}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            <div className="relative z-10 w-full h-full flex items-end justify-center pb-0">
+              <MatildaCharacter />
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }
